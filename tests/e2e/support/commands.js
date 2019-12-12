@@ -30,13 +30,13 @@ import * as mutation from './mutations';
 
 const clientPromise = createClient();
 
-Cypress.Commands.add('login', customer => cy.createCustomer(customer).then(() => {
+Cypress.Commands.add('login', (customer) => {
   cy.visit('/login');
   cy.get('[data-test=login-button]').click();
   cy.get('[data-test=login-form-email]').type(customer.email);
   cy.get('[data-test=login-form-password]').type(customer.password);
   cy.get('[data-test=login-form-submit]').click();
-}));
+});
 
 Cypress.Commands.add('checkCustomerIsLoggedIn', (customer) => {
   cy.get('[data-test=user-profile-name]').should('contain', `${customer.firstName} ${customer.lastName}`);
@@ -45,6 +45,15 @@ Cypress.Commands.add('checkCustomerIsLoggedIn', (customer) => {
   cy.get('[data-test=login-button]').should('not.exist');
   cy.get('[data-test=logout-button]').should('exist');
   cy.get('[data-test=login-info-name]').should('contain', customer.firstName);
+});
+
+Cypress.Commands.add('changeLanguage', (language) => {
+  cy.get('[data-test=location-selector-open-button]').click();
+  cy.get('span[data-test=location-selector-dropdown]')
+    .click()
+    .parent()
+    .contains(language)
+    .click();
 });
 
 Cypress.Commands.add('createCustomer', draft => cy.wrap(clientPromise
@@ -79,3 +88,7 @@ Cypress.Commands.add('createOrder', (cartDraft, orderDraft) => cy.wrap(clientPro
         const draft = Object.assign({}, orderDraft, { id: cart.id, version: cart.version });
         return mutation.createOrder(client, draft);
       })))));
+
+Cypress.Commands.add('addProduct', draft => cy.wrap(clientPromise
+  .then(client => mutation.deleteProduct(client, draft.key)
+    .then(() => mutation.createProduct(client, draft)))));

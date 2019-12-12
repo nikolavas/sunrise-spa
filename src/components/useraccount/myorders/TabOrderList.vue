@@ -1,7 +1,9 @@
 <template>
-  <div v-if="me"
-       class="my-orders">
-    <div class="my-orders-content">
+  <div class="my-orders">
+    <LoadingSpinner v-if="isLoading"/>
+
+    <div v-else-if="orderListNotEmpty"
+         class="my-orders-content">
       <div class="my-orders-table-wrapper">
         <div class="row">
           <div class="col-md-2 col-sm-3 col-xs-4">
@@ -74,6 +76,14 @@
         </div>
       </div>
     </div>
+
+    <div v-else
+         data-test="empty-order-list"
+         class="empty-results-container">
+      <span class="empty-order-list">
+        {{ $t('emptyOrders') }}
+      </span>
+    </div>
   </div>
 </template>
 
@@ -81,14 +91,25 @@
 import gql from 'graphql-tag';
 import BaseMoney from '../../common/BaseMoney.vue';
 import BaseDate from '../../common/BaseDate.vue';
-import DisplayableMoneyFragment from '@/components/DisplayableMoney.gql';
+import LoadingSpinner from '../../common/LoadingSpinner.vue';
+import MONEY_FRAGMENT from '../../Money.gql';
 
 export default {
-  components: { BaseMoney, BaseDate },
+  components: { BaseMoney, BaseDate, LoadingSpinner },
 
   data: () => ({
     me: null,
   }),
+
+  computed: {
+    isLoading() {
+      return this.$apollo.loading;
+    },
+
+    orderListNotEmpty() {
+      return this.me?.orders?.results.length > 0;
+    },
+  },
 
   methods: {
     translateStatus(state) {
@@ -101,12 +122,12 @@ export default {
       query: gql`
         query MyOrders {
           me {
-            orders {
+            orders(sort: "createdAt desc") {
               results {
                 id
                 orderNumber
                 totalPrice {
-                  ...DisplayableMoney
+                  ...MoneyFields
                 }
                 createdAt
                 shipmentState
@@ -115,7 +136,7 @@ export default {
             }
           }
         },
-        ${DisplayableMoneyFragment}`,
+        ${MONEY_FRAGMENT}`,
     },
   },
 };
@@ -139,6 +160,7 @@ en:
   CreditOwed: "Credit Owed"
   Paid: "Paid"
   view: "View"
+  emptyOrders: "You have not placed any orders yet!"
 de:
   orderNumber: "Best.-Nr."
   date: "Datum"
@@ -156,4 +178,5 @@ de:
   CreditOwed: "Kreditforderung"
   Paid: "Bezahlt"
   view: "Ansehen"
+  emptyOrders: "Sie haben noch keine Bestellungen aufgegeben!"
 </i18n>

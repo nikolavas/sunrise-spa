@@ -1,24 +1,28 @@
 describe('CartDetailPage', () => {
   beforeEach(() => {
-    localStorage.removeItem('auth');
     cy.visit('/cart');
   });
 
-  it('displays content of cart', () => {
-    cy.get('[data-test=cart-total-items]', { timeout: 20000 })
-      .contains(/^\s*0 items in total\s*$/);
+  it('displays a message when cart is empty', () => {
+    cy.get('[data-test=empty-cart]')
+      .contains('Your bag is empty!');
+  });
 
+  it('displays content of cart', () => {
     cy.addLineItem('/product/lemare-booties-0778-brown/M0E20000000E0XM', 2);
     cy.addLineItem('/product/lemare-booties-0778-grey/M0E20000000E0WX', 3);
     cy.visit('/cart');
-    cy.get('[data-test=cart-total-items]')
+    cy.get('[data-test=cart-total-items]', { timeout: Cypress.config('graphqlTimeout') })
       .contains(/^\s*5 items in total\s*$/);
 
     cy.get('[data-test=cart-total-price]')
-      .contains(/^\s*1.019,86\s€\s*$/);
+      .contains(/^\s*815,90\s€\s*$/);
+
+    cy.get('[data-test=cart-taxes-amount]')
+      .contains(/^\s*130,27\s€\s*$/);
 
     cy.get('[data-test=cart-subtotal-price]')
-      .contains(/^\s*1.019,86\s€\s*$/);
+      .contains(/^\s*815,90\s€\s*$/);
 
     cy.get('[data-test=cart-line-item]')
       .should('have.length', 2)
@@ -39,15 +43,15 @@ describe('CartDetailPage', () => {
 
         cy.wrap($lineItem)
           .find('[data-test=price-old-value]')
-          .contains(/^\s*248,75\s€\s*$/);
+          .contains(/^\s*199,00\s€\s*$/);
 
         cy.wrap($lineItem)
           .find('[data-test=price-new-value]')
-          .contains(/^\s*174,12\s€\s*$/);
+          .contains(/^\s*139,30\s€\s*$/);
 
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-total-price]')
-          .contains(/^\s*522,36\s€\s*$/);
+          .contains(/^\s*417,90\s€\s*$/);
       });
   });
 
@@ -55,7 +59,7 @@ describe('CartDetailPage', () => {
     cy.addLineItem('/product/lemare-booties-0778-grey/M0E20000000E0WX', 3);
     cy.visit('/cart');
 
-    cy.get('[data-test=cart-line-item]')
+    cy.get('[data-test=cart-line-item]', { timeout: Cypress.config('graphqlTimeout') })
       .should('have.length', 1)
       .then(($lineItem) => {
         cy.wrap($lineItem)
@@ -65,7 +69,7 @@ describe('CartDetailPage', () => {
           .type('5');
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-total-price]')
-          .contains(/^\s*870,60\s€\s*$/);
+          .contains(/^\s*696,50\s€\s*$/, { timeout: Cypress.config('graphqlTimeout') });
 
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-quantity-inc]')
@@ -76,7 +80,7 @@ describe('CartDetailPage', () => {
           .should('have.value', '7');
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-total-price]')
-          .contains(/^\s*1.218,84\s€\s*$/);
+          .contains(/^\s*975,10\s€\s*$/, { timeout: Cypress.config('graphqlTimeout') });
 
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-quantity-dec]')
@@ -86,11 +90,24 @@ describe('CartDetailPage', () => {
           .should('have.value', '6');
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-total-price]')
-          .contains(/^\s*1.044,72\s€\s*$/);
+          .contains(/^\s*835,80\s€\s*$/, { timeout: Cypress.config('graphqlTimeout') });
 
         cy.wrap($lineItem)
           .find('[data-test=cart-line-item-delete]').click();
       });
+    cy.get('[data-test=cart-line-item]')
+      .should('have.length', 0, { timeout: Cypress.config('graphqlTimeout') });
+  });
+
+  it('removes line item when quantity is decreased to less than 1', () => {
+    cy.addLineItem('/product/lemare-booties-0778-grey/M0E20000000E0WX', 1);
+    cy.visit('/cart');
+
+    cy.get('[data-test=cart-line-item]')
+      .should('have.length', 1);
+
+    cy.get('[data-test=cart-line-item-quantity-dec]')
+      .click();
     cy.get('[data-test=cart-line-item]').should('have.length', 0);
   });
 
@@ -113,14 +130,14 @@ describe('CartDetailPage', () => {
     cy.visit('/cart');
 
     cy.get('[data-test=cart-line-item-total-price]')
-      .contains(/^\s*248,75\s€\s*$/);
+      .contains(/^\s*199,00\s€\s*$/, { timeout: Cypress.config('graphqlTimeout') });
 
     cy.get('[data-test=discount-code-input]')
       .type('SUNRISE_CI');
     cy.get('[data-test=apply-discount-code-button]')
       .click();
     cy.get('[data-test=cart-total-price]')
-      .contains(/^\s*124,37\s€\s*$/);
+      .contains(/^\s*99,50\s€\s*$/, { timeout: Cypress.config('graphqlTimeout') });
 
     cy.get('[data-test=discount-code-name]')
       .contains('SUNRISE_CI');
@@ -128,6 +145,6 @@ describe('CartDetailPage', () => {
       .click();
 
     cy.get('[data-test=cart-line-item-total-price]')
-      .contains(/^\s*124,37\s€\s*$/);
+      .contains(/^\s*199,00\s€\s*$/, { timeout: Cypress.config('graphqlTimeout') });
   });
 });

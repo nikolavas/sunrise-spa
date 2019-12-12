@@ -1,10 +1,7 @@
 describe('Product overview page', () => {
-  before(() => {
-    cy.visit('/products/men');
-  });
-
   it('Changes sorting settings', () => {
-    cy.get('span[data-test=sort-selector]')
+    cy.visit('/products/men');
+    cy.get('span[data-test=sort-selector]', { timeout: Cypress.config('graphqlTimeout') })
       .click()
       .parent()
       .contains('Newest')
@@ -14,7 +11,7 @@ describe('Product overview page', () => {
       .should('exist');
     cy.get('[data-test=spinner]')
       .should('not.exist');
-    cy.get('[data-test=product-list]', { timeout: 20000 })
+    cy.get('[data-test=product-list]')
       .first()
       .find('[data-test=product-thumbnail-name]')
       .contains('Shirt ”David” MU light blue');
@@ -33,7 +30,7 @@ describe('Product overview page', () => {
     cy.get('[data-test=spinner]')
       .should('not.exist');
     cy.url().should('include', '/products/men?sort=oldest');
-    cy.get('[data-test=product-list]', { timeout: 20000 })
+    cy.get('[data-test=product-list]')
       .first()
       .find('[data-test=product-thumbnail-name]')
       .contains('Lace up shoes Tods dark blue');
@@ -45,7 +42,11 @@ describe('Product overview page', () => {
 
   it('Applies sorting settings from URL', () => {
     cy.visit('/products/men?sort=newest');
-    cy.get('[data-test=product-list]', { timeout: 20000 })
+    cy.get('[data-test=spinner]')
+      .should('exist');
+    cy.get('[data-test=spinner]')
+      .should('not.exist');
+    cy.get('[data-test=product-list]')
       .first()
       .find('[data-test=product-thumbnail-name]')
       .contains('Shirt ”David” MU light blue');
@@ -53,5 +54,18 @@ describe('Product overview page', () => {
       .last()
       .find('[data-test=product-thumbnail-name]')
       .contains('Lace up shoes Tods dark blue');
+  });
+
+  it('Displays a message when an error occurs', () => {
+    cy.visit('/products/accessories');
+    cy.get('[data-test=empty-results]')
+      .contains('No Results Found');
+
+    cy.get('span[data-test=sort-selector]')
+      .should('not.exist');
+
+    cy.visit('/products/unvalidCategory');
+    cy.get('[data-test=category-not-found]')
+      .contains('Category Not Found');
   });
 });

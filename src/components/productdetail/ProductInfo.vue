@@ -8,12 +8,12 @@
          class="col-sm-6 product-description">
       <div class="row">
         <div class="col-sm-12">
-            <h1 data-test="product-name"
-                class="text-uppercase pdp-product-title">
-              {{ currentProduct.name }}
-            </h1>
-            <span data-test="product-sku"
-                  class="grey-p quickview-sku">
+          <h1 data-test="product-name"
+              class="text-uppercase pdp-product-title">
+            {{ currentProduct.name }}
+          </h1>
+          <span data-test="product-sku"
+                class="grey-p quickview-sku">
               {{ sku }}
             </span>
         </div>
@@ -41,6 +41,7 @@
 
         </div>
       </div>
+      <VariantSelector :sku="sku" />
       <AddToCartForm :sku="sku"/>
       <!-- {{> catalog/add-to-wishlist-btn}}
       {{> catalog/reserve-in-store-btn}} -->
@@ -57,29 +58,32 @@
 
 <script>
 import gql from 'graphql-tag';
-import priceMixin from '@/mixins/priceMixin';
-import productMixin from '@/mixins/productMixin';
+import productMixin from '../../mixins/productMixin';
 import ProductGallery from './ProductGallery.vue';
 import SocialMediaLinks from './SocialMediaLinks.vue';
 import DetailsSection from './DetailsSection.vue';
 import AddToCartForm from './AddToCartForm.vue';
 import BasePrice from '../common/BasePrice.vue';
+import VariantSelector from './VariantSelector.vue';
 
 export default {
-  components: {
-    DetailsSection,
-    ProductGallery,
-    SocialMediaLinks,
-    AddToCartForm,
-    BasePrice,
-  },
-
   props: {
     sku: {
       type: String,
       required: true,
     },
   },
+
+  components: {
+    DetailsSection,
+    ProductGallery,
+    SocialMediaLinks,
+    AddToCartForm,
+    BasePrice,
+    VariantSelector,
+  },
+
+  mixins: [productMixin],
 
   data: () => ({
     product: null,
@@ -90,8 +94,6 @@ export default {
       return this.currentProduct.variant || {};
     },
   },
-
-  mixins: [priceMixin, productMixin],
 
   apollo: {
     product: {
@@ -126,8 +128,8 @@ export default {
         }`,
       variables() {
         return {
-          locale: this.$i18n.locale,
-          currency: this.currency,
+          locale: this.$store.state.locale,
+          currency: this.$store.state.currency,
           sku: this.sku,
         };
       },

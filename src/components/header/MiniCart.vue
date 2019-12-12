@@ -2,12 +2,12 @@
   <li @mouseleave="close"
       @mouseenter="open"
       class="list-item-bag">
-    <button @click="toggle"
-            data-test="mini-cart-open-button"
-            class="not-empty link-your-bag icon-hand-bag">
+    <router-link :to=" { name: 'cart' }"
+                 data-test="mini-cart-open-button"
+                 class="not-empty link-your-bag icon-hand-bag">
       <span class="hidden-xs hidden-sm">{{ $t('miniCart') }}</span>
       <span class="cart-item-number">{{ totalItems }}</span>
-    </button>
+    </router-link>
     <transition name="fade">
       <div v-show="show"
            v-if="totalItems"
@@ -47,10 +47,12 @@
           <BaseMoney :money="me.activeCart.totalPrice"/>
         </p>
         <router-link :to="{ name: 'cart' }"
+                     @click.native="toggle"
                      class="btn-grey">
           {{ $t('viewBag') }}
         </router-link>
         <router-link :to="{ name: 'checkout' }"
+                     @click.native="toggle"
                      class="btn-yellow">{{ $t('checkout') }}</router-link>
       </div>
     </transition>
@@ -61,13 +63,12 @@
 import Vue from 'vue';
 import gql from 'graphql-tag';
 import VuePerfectScrollbar from 'vue-perfect-scrollbar';
-import cartMixin from '@/mixins/cartMixin';
-import priceMixin from '@/mixins/priceMixin';
-import productMixin from '@/mixins/productMixin';
-import DisplayableMoneyFragment from '@/components/DisplayableMoney.gql';
+import cartMixin from '../../mixins/cartMixin';
+import productMixin from '../../mixins/productMixin';
 import BaseMoney from '../common/BaseMoney.vue';
 import LineItemInfo from '../common/cartlike/LineItemInfo.vue';
 import LineItemDeleteForm from '../cartdetail/LineItemDeleteForm.vue';
+import MONEY_FRAGMENT from '../Money.gql';
 
 export default {
   components: {
@@ -77,7 +78,7 @@ export default {
     VuePerfectScrollbar,
   },
 
-  mixins: [cartMixin, priceMixin, productMixin],
+  mixins: [cartMixin, productMixin],
 
   data: () => ({
     me: null,
@@ -90,10 +91,6 @@ export default {
   },
 
   methods: {
-    toggle() {
-      this.$store.dispatch('toggleMiniCart');
-    },
-
     open() {
       this.$store.dispatch('openMiniCart', 0);
     },
@@ -130,19 +127,19 @@ export default {
                   }
                 }
                 totalPrice {
-                  ...DisplayableMoney
+                  ...MoneyFields
                 }
               }
               totalPrice {
-                ...DisplayableMoney
+                ...MoneyFields
               }
             }
           }
         }
-        ${DisplayableMoneyFragment}`,
+        ${MONEY_FRAGMENT}`,
       variables() {
         return {
-          locale: this.$i18n.locale,
+          locale: this.$store.state.locale,
         };
       },
     },
@@ -151,9 +148,9 @@ export default {
 </script>
 
 <style>
-  .nav-minicart .delete-text {
-    display: none;
-  }
+.nav-minicart .delete-text {
+  display: none;
+}
 </style>
 
 <i18n>
