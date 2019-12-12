@@ -14,6 +14,8 @@ import TabPersonalDetails from './components/useraccount/userdetail/TabPersonalD
 import TabOrderList from './components/useraccount/myorders/TabOrderList.vue';
 import TabOrderDetail from './components/useraccount/myorders/TabOrderDetail.vue';
 import TabChangePassword from './components/useraccount/changepassword/TabChangePassword.vue';
+import ForgotPassword from './components/login/ForgotPassword.vue';
+import ResetPassword from './components/login/ResetPassword.vue';
 
 Vue.use(Router);
 
@@ -49,6 +51,24 @@ const router = new Router({
       name: 'login',
       components: {
         default: PageLogin,
+        header: TheHeader,
+        footer: TheFooter,
+      },
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password',
+      components: {
+        default: ForgotPassword,
+        header: TheHeader,
+        footer: TheFooter,
+      },
+    },
+    {
+      path: '/reset-password/:token',
+      name: 'reset-password',
+      components: {
+        default: ResetPassword,
         header: TheHeader,
         footer: TheFooter,
       },
