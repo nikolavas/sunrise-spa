@@ -1,6 +1,6 @@
 import Vuelidate from 'vuelidate';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import StepShippingMethodForm from '@/components/checkout/StepShippingMethodForm.vue';
+import StepShippingMethodForm from '../../../../../src/shops/clothes/StepShippingMethodForm';
 
 const localVue = createLocalVue();
 localVue.use(Vuelidate);
@@ -16,7 +16,9 @@ describe('StepShippingMethodForm.vue', () => {
   });
 
   it('renders a vue instance', () => {
-    expect(shallowMount(StepShippingMethodForm, options).isVueInstance()).toBeTruthy();
+    expect(
+      shallowMount(StepShippingMethodForm, options).isVueInstance(),
+    ).toBeTruthy();
   });
 
   it('finds the matching shipping rate', () => {
@@ -55,6 +57,6 @@ describe('StepShippingMethodForm.vue', () => {
     expect(wrapper.vm.isFree({ freeAbove: { centAmount: 1000 } })).toBeFalsy();
     expect(wrapper.vm.isFree({ freeAbove: { centAmount: 999 } })).toBeFalsy();
     expect(wrapper.vm.isFree({ freeAbove: { centAmount: 998 } })).toBeTruthy();
-    expect(wrapper.vm.isFree({ })).toBeFalsy();
+    expect(wrapper.vm.isFree({})).toBeFalsy();
   });
 });

@@ -1,0 +1,12 @@
+<template>
+  <BaseFooter>
+    <div class="footer">
+      <div id="footer" class="container">
+        <div class="row text-uppercase">
+          <FooterLinks />
+          <FooterMarketing />
+        </div>
+      </div>
+    </div>
+  </BaseFooter>
+</template>

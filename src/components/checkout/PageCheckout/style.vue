@@ -1,0 +1,57 @@
+<style lang="scss">
+#checkout {
+  margin-bottom: 70px;
+
+  .checkout-content {
+    padding: 1em 2em 2em;
+  }
+
+  .checkout-step-title {
+    margin: 1em 0;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $alto;
+
+    span {
+      text-transform: uppercase;
+      font-size: 1.1em;
+      letter-spacing: 0.1em;
+      padding-bottom: 1em;
+      margin: 15px 0 20px;
+    }
+  }
+
+  .selectboxit {
+    background: url('../../../assets/img/arrow-67-filled.png') no-repeat 90% 50%
+      #fff;
+    background-size: 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 1px;
+  }
+  .selectboxit,
+  .selectboxit-options {
+    width: 100% !important;
+  }
+
+  .checkout-form-option {
+    background: lighten(#d6d6d6, 10%);
+    border-radius: 2px;
+    padding: 1.5em;
+    margin: 0.1em 0;
+
+    .option-name {
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .option-description {
+      text-transform: none;
+      padding-left: 1em;
+    }
+
+    .option-price {
+      text-align: right;
+      float: right;
+    }
+  }
+}
+</style>

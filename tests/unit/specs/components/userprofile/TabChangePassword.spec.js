@@ -1,6 +1,6 @@
 import Vuelidate from 'vuelidate';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import TabChangePassword from '@/components/useraccount/changepassword/TabChangePassword.vue';
+import TabChangePassword from '../../../../../src/shops/clothes/TabChangePassword';
 
 jest.mock('@/auth', () => ({ clientLogin: jest.fn() }));
 
@@ -19,6 +19,8 @@ describe('TabChangePassword.vue', () => {
   });
 
   it('renders a vue instance', () => {
-    expect(shallowMount(TabChangePassword, options).isVueInstance()).toBeTruthy();
+    expect(
+      shallowMount(TabChangePassword, options).isVueInstance(),
+    ).toBeTruthy();
   });
 });
