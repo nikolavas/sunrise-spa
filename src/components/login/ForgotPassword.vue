@@ -73,12 +73,6 @@ export default {
     sendRecoveryEmail() {
       return axios.post('https://a8nroxg8i3.execute-api.eu-west-1.amazonaws.com/dev/email/send',
         { email: this.email, baseUrl: window.location.origin });
-      // .then((response) => {
-      //   console.log(response);
-      // });
-      // .catch((error) => {
-      //   console.log(error.response);
-      // });
     },
 
     getErrorMessage({ code }) {
