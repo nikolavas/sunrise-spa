@@ -25,7 +25,8 @@
                               :vuelidate="$v.email"
                               :label="$t('email')"
                               type="email"
-                              class="form-inputs"/>
+                              class="form-inputs"
+                              data-test="forgot-password-email"/>
                   </div>
                 </div>
               </div>
@@ -34,7 +35,8 @@
                 <span>
                   <LoadingButton :state="state"
                                  :disabled="!$v.$anyDirty"
-                                 type="submit">
+                                 type="submit"
+                                 data-test="forgot-password-form-submit">
                     {{ $t('submit') }}
                   </LoadingButton>
                 </span>
@@ -70,10 +72,10 @@ export default {
   methods: {
     sendRecoveryEmail() {
       return axios.post('https://a8nroxg8i3.execute-api.eu-west-1.amazonaws.com/dev/email/send',
-        { email: this.email, baseUrl: window.location.origin })
-        .then((response) => {
-          console.log(response);
-        });
+        { email: this.email, baseUrl: window.location.origin });
+      // .then((response) => {
+      //   console.log(response);
+      // });
       // .catch((error) => {
       //   console.log(error.response);
       // });

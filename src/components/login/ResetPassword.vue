@@ -25,7 +25,8 @@
                               :vuelidate="$v.newPassword"
                               :label="$t('newPassword')"
                               type="password"
-                              class="form-inputs"/>
+                              class="form-inputs"
+                              data-test="reset-new-password"/>
                   </div>
                 </div>
               </div>
@@ -36,7 +37,8 @@
                               :vuelidate="$v.confirmPassword"
                               :label="$t('confirmPassword')"
                               type="password"
-                              class="form-inputs"/>
+                              class="form-inputs"
+                              data-test="reset-confirm-password"/>
                   </div>
                 </div>
               </div>
@@ -45,7 +47,8 @@
                 <span>
                   <LoadingButton :state="state"
                                  :disabled="!$v.$anyDirty"
-                                 type="submit">
+                                 type="submit"
+                                 data-test="reset-password-submit">
                     {{ $t('submit') }}
                   </LoadingButton>
                 </span>
