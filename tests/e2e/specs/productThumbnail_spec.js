@@ -2,7 +2,7 @@ import _const from '../support/const';
 
 describe('Product thumbnail', () => {
   before(() => {
-    cy.visit('/products/men/1');
+    cy.visit('/products/men?sort=oldest');
   });
 
   it('displays product information', () => {
@@ -28,7 +28,7 @@ describe('Product thumbnail', () => {
           .find('[data-test=price-new-value]')
           .contains(new RegExp(`^\\s*${_const.one.PRICE}\\s€\\s*$`));
       });
-    cy.visit('/products/men/2');
+    cy.visit('/products/men/2?sort=oldest');
     cy.get('[data-test=product-thumbnail-name]')
       .should((e) => {
         expect(e.text()).to.include(_const.three.NAME);
