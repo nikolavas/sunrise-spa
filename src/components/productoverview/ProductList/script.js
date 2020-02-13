@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 import LoadingSpinner from '../../common/LoadingSpinner/index.vue';
 import ProductThumbnail from '../../common/ProductThumbnail/index.vue';
 import ProductSortSelector from '../ProductSortSelector/index.vue';
-import Pagination from '../Pagination/index.vue';
+import Pagination from '../../common/Pagination/index.vue';
 import { products, onlyLastRequestedPromise } from '../../../api';
 import { toPrice } from '../../common/shared';
 

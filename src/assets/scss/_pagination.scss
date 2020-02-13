@@ -31,16 +31,15 @@
   }
 }
 
-.custom-pagination {
-  text-align: center;
-  margin-top: 25px;
-}
-
 .pagination {
   margin: 0;
   border-radius: 0;
   min-width: 55px;
   text-align: center;
+  &.custom-pagination {
+    min-width: 100%;
+    margin-top: 25px;
+  }  
 }
 
 .pagination-item {

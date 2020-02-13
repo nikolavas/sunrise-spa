@@ -4,10 +4,11 @@ import BaseDate from '../../../common/BaseDate/index.vue';
 import LoadingSpinner from '../../../common/LoadingSpinner/index.vue';
 import MONEY_FRAGMENT from '../../../Money.gql';
 import { pageFromRoute } from '../../../common/shared';
+import Pagination from '../../../common/Pagination/index.vue';
 
 export default {
   components: {
-    BaseMoney, BaseDate, LoadingSpinner,
+    BaseMoney, BaseDate, LoadingSpinner, Pagination,
   },
   data: () => ({
     me: null,
@@ -26,20 +27,13 @@ export default {
     orderListNotEmpty() {
       return this.me?.orders?.results.length > 0;
     },
-    totalPages() {
-      return Math.ceil(this.me?.orders.total / this.limit);
+    total() {
+      return this.me?.orders.total;
     },
 
     disablePagePrev() {
       return this.page === 1;
     },
-    disablePageNext() {
-      return this.page >= this.totalPages;
-    },
-    showPaging() {
-      return this.totalPages > 1;
-    },
-
   },
   methods: {
     translateStatus(state) {
@@ -52,11 +46,8 @@ export default {
         params: { ...params, page },
       });
     },
-    pageForward() {
-      this.pushPage(this.page + 1);
-    },
-    pageBack() {
-      this.pushPage(this.page - 1);
+    changePage(page) {
+      this.pushPage(page);
     },
   },
   apollo: {
