@@ -5,7 +5,7 @@ import ProductThumbnail from '../../common/ProductThumbnail/index.vue';
 import ProductSortSelector from '../ProductSortSelector/index.vue';
 import Pagination from '../../common/Pagination/index.vue';
 import { products, onlyLastRequestedPromise } from '../../../api';
-import { toPrice } from '../../common/shared';
+import { toPrice, pushPage } from '../../common/shared';
 
 const last = onlyLastRequestedPromise('products');
 const getProducts = (component) => {
@@ -104,12 +104,7 @@ export default {
       this.sort = sort;
     },
     changePage(page) {
-      const { params, query } = this.$route;
-      this.$router.push({
-        name: 'products',
-        params: { ...params, page },
-        query,
-      });
+      pushPage(page, this, 'products');
     },
     showScroll(el) {
       // eslint-disable-next-line no-param-reassign

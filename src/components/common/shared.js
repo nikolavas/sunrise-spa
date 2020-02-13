@@ -34,3 +34,11 @@ export const pageFromRoute = (route) => {
     page,
   };
 };
+export const pushPage = (page, component, name) => {
+  const { params, query } = component.$route;
+  component.$router.push({
+    name,
+    params: { ...params, page },
+    query,
+  });
+};

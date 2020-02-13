@@ -3,7 +3,7 @@ import BaseMoney from '../../../common/BaseMoney/index.vue';
 import BaseDate from '../../../common/BaseDate/index.vue';
 import LoadingSpinner from '../../../common/LoadingSpinner/index.vue';
 import MONEY_FRAGMENT from '../../../Money.gql';
-import { pageFromRoute } from '../../../common/shared';
+import { pageFromRoute, pushPage } from '../../../common/shared';
 import Pagination from '../../../common/Pagination/index.vue';
 
 export default {
@@ -40,11 +40,7 @@ export default {
       return state ? this.$t(state) : '-';
     },
     pushPage(page) {
-      const { params } = this.$route;
-      this.$router.push({
-        name: 'orders',
-        params: { ...params, page },
-      });
+      pushPage(page, this, 'orders');
     },
     changePage(page) {
       this.pushPage(page);
