@@ -2,6 +2,9 @@ import _const from '../support/const';
 
 describe('Product overview page', () => {
   it('Changes sorting settings', () => {
+    // https://github.com/cypress-io/cypress/issues/95
+    delete window.fetch;
+    cy.server({ delay: 1000 });
     cy.visit('/products/men');
     cy.get('span[data-test=sort-selector]', { timeout: Cypress.config('graphqlTimeout') })
       .click()
@@ -9,11 +12,10 @@ describe('Product overview page', () => {
       .contains('Newest')
       .click();
     cy.url().should('include', '/products/men?sort=newest');
-    // by the time cypress gets to look for the spinner it is already gone
-    // cy.get('[data-test=spinner]')
-    //   .should('exist');
-    // cy.get('[data-test=spinner]')
-    //   .should('not.exist');
+    cy.get('[data-test=spinner]')
+      .should('exist');
+    cy.get('[data-test=spinner]')
+      .should('not.exist');
     cy.get('[data-test=product-list]')
       .first()
       .find('[data-test=product-thumbnail-name]')
@@ -32,11 +34,10 @@ describe('Product overview page', () => {
       .parent()
       .contains('Oldest')
       .click();
-    // by the time cypress gets to look for the spinner it is already gone
-    // cy.get('[data-test=spinner]')
-    //   .should('exist');
-    // cy.get('[data-test=spinner]')
-    //   .should('not.exist');
+    cy.get('[data-test=spinner]')
+      .should('exist');
+    cy.get('[data-test=spinner]')
+      .should('not.exist');
     cy.url().should('include', '/products/men?sort=oldest');
     cy.get('[data-test=product-list]')
       .first()
@@ -55,11 +56,10 @@ describe('Product overview page', () => {
 
   it('Applies sorting settings from URL', () => {
     cy.visit('/products/men?sort=newest');
-    // by the time cypress gets to look for the spinner it is already gone
-    // cy.get('[data-test=spinner]')
-    //   .should('exist');
-    // cy.get('[data-test=spinner]')
-    //   .should('not.exist');
+    cy.get('[data-test=spinner]')
+      .should('exist');
+    cy.get('[data-test=spinner]')
+      .should('not.exist');
     cy.get('[data-test=product-list]')
       .first()
       .find('[data-test=product-thumbnail-name]')
