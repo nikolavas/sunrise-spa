@@ -55,6 +55,8 @@ describe('Product overview page', () => {
   });
 
   it('Applies sorting settings from URL', () => {
+    delete window.fetch;
+    cy.server({ delay: 1000 });
     cy.visit('/products/men?sort=newest');
     cy.get('[data-test=spinner]')
       .should('exist');
