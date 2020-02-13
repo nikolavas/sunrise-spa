@@ -1,10 +1,24 @@
 import _const from '../support/const';
 
 describe('Product overview page', () => {
+  const wFetch = window.fetch;
+  const later = () => new Promise(
+    r => setTimeout(r, 1000),
+  );
+  before(() => {
+    window.fetch = function fetch() {
+      // eslint-disable-next-line prefer-rest-params
+      const args = arguments;
+      return later().then(() => wFetch.apply(window, args));
+    };
+  });
+
+  after(() => {
+    window.fetch = wFetch;
+  });
+
+
   it('Changes sorting settings', () => {
-    // https://github.com/cypress-io/cypress/issues/95
-    delete window.fetch;
-    cy.server({ delay: 1000 });
     cy.visit('/products/men');
     cy.get('span[data-test=sort-selector]', { timeout: Cypress.config('graphqlTimeout') })
       .click()
@@ -55,8 +69,6 @@ describe('Product overview page', () => {
   });
 
   it('Applies sorting settings from URL', () => {
-    delete window.fetch;
-    cy.server({ delay: 1000 });
     cy.visit('/products/men?sort=newest');
     cy.get('[data-test=spinner]')
       .should('exist');
