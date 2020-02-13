@@ -115,7 +115,7 @@ const router = new Router({
       },
       children: [
         {
-          path: 'orders/detail/:id', name: 'order', component: TabOrderDetail,
+          path: 'order/:id', name: 'order', component: TabOrderDetail,
         },
         {
           path: 'orders/:page?',
