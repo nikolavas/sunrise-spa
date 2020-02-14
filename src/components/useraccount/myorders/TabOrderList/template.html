@@ -73,11 +73,12 @@
           </div>
         </div>
       </div>
-      <Pagination :pageSize="limit"
-        :total="total"
-        :page="page"
-        customClass="custom-pagination"
-        @pagechanged="changePage" />
+      <div class="orders-pagination">
+        <Pagination :pageSize="limit"
+          :total="total"
+          :page="page"
+          @pagechanged="changePage" />
+      </div>
     </div>
     <div v-else
          data-test="empty-order-list"

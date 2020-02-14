@@ -1,5 +1,5 @@
 export default {
-  props: ['pageSize', 'total', 'page', 'customClass'],
+  props: ['pageSize', 'total', 'page'],
   computed: {
     totalPages() {
       const { total, pageSize } = this;
