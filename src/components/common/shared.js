@@ -42,3 +42,77 @@ export const pushPage = (page, component, name) => {
     query,
   });
 };
+export const mix = (a, b) => Object.entries(a).reduce(
+  (result, [key, value]) => {
+    if (key === 'props') {
+      return {
+        ...result,
+        props: [...new Set((b.props || []).concat(value))],
+      };
+    }
+    if (key === 'data') {
+      return {
+        ...result,
+        data: (...args) => ({
+          ...value(...args),
+          ...(b.data && b.data(...args)),
+        }),
+      };
+    }
+    return {
+      ...result,
+      [key]: { ...value, ...b[key] },
+    };
+  }, b,
+);
+
+export const withAppollo = appolloValues => (component) => {
+  const entities = Object.keys(appolloValues);
+  return mix(
+    {
+      apollo: Object.entries(appolloValues).reduce(
+        (result, [key, value]) => ({
+          ...result,
+          [key]: {
+            ...value,
+            error(error) {
+              this[`${key}Error`] = JSON.stringify(error.message);
+            },
+          },
+        }), {},
+      ),
+      data: () => entities.reduce(
+        (result, entity) => ({
+          ...result,
+          [`${entity}Error`]: null,
+          [entity]: null,
+        }), {},
+      ),
+      computed: entities.reduce(
+        (result, entity) => ({
+          ...result,
+          [`${entity}Loading`]() {
+            return this.$apollo.queries[entity]?.loading;
+          },
+          [`${entity}Total`]() {
+            return appolloValues[entity].getter(this)?.total;
+          },
+          [`${entity}Data`]() {
+            return appolloValues[entity].getter(this)?.results;
+          },
+        }), {
+          apolloLoading() {
+            return this.$apollo?.loading;
+          },
+          apolloError() {
+            return entities.reduce(
+              (result, entity) => result
+                || this[`${entity}Error`], false,
+            );
+          },
+        },
+      ),
+    },
+    component,
+  );
+};

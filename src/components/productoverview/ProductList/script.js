@@ -5,13 +5,13 @@ import ProductThumbnail from '../../common/ProductThumbnail/index.vue';
 import ProductSortSelector from '../ProductSortSelector/index.vue';
 import Pagination from '../../common/Pagination/index.vue';
 import { products, onlyLastRequestedPromise } from '../../../api';
-import { toPrice, pushPage } from '../../common/shared';
+import { toPrice, pushPage, withAppollo } from '../../common/shared';
 
 const last = onlyLastRequestedPromise('products');
 const getProducts = (component) => {
   const category = component.$route.params.categorySlug === 'all'
     ? undefined
-    : component.categories?.results[0]?.id;
+    : component.categoriesData?.[0]?.id;
   if (
     !category
     && component.$route.params.categorySlug !== 'all'
@@ -67,7 +67,7 @@ const getProducts = (component) => {
     component.loadingProducts = false;
   });
 };
-export default {
+const component = {
   props: ['categorySlug', 'page'],
   components: {
     LoadingSpinner,
@@ -76,7 +76,6 @@ export default {
     Pagination,
   },
   data: () => ({
-    categories: null,
     products: null,
     sort: null,
     limit: Number(process.env.VUE_APP_PAGE_SIZE || 75),
@@ -84,7 +83,10 @@ export default {
   }),
   computed: {
     category() {
-      return this.categories.results[0];
+      // only used for unit test
+      // @todo: make the unit test better so it gets data
+      //  from apollo
+      return this.categories?.results?.[0];
     },
     hasManyProducts() {
       return this.products?.results.length >= this.limit / 2;
@@ -95,8 +97,8 @@ export default {
     totalProducts() {
       return this.products.total;
     },
-    isLoading() {
-      return this.loadingProducts || this.$apollo.loading;
+    loading() {
+      return this.loadingProducts || this.apolloLoading;
     },
   },
   methods: {
@@ -112,10 +114,20 @@ export default {
        && window.scrollY > 200 ? '' : 'none';
     },
   },
-  apollo: {
+  watch: {
+    $route() {
+      getProducts(this);
+    },
+    categories() {
+      getProducts(this);
+    },
+  },
+};
+export default withAppollo(
+  {
     categories: {
       query: gql`
-        query categories($where: String) {
+        query categories($where: String!) {
           categories(where: $where, limit: 1) {
             results {
               id
@@ -127,15 +139,10 @@ export default {
           where: `slug(${this.$store.state.locale}="${this.categorySlug}")`,
         };
       },
+      getter(comp) {
+        return comp?.$apollo?.data?.categories;
+      },
       skip: vm => !vm.categorySlug,
     },
   },
-  watch: {
-    $route() {
-      getProducts(this);
-    },
-    categories() {
-      getProducts(this);
-    },
-  },
-};
+)(component);
