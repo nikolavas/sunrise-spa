@@ -10,10 +10,13 @@ export const withPage = ({
   pageSize,
   ...query,
 });
-const fetchJson = (...args) => fetch(...args).then((result) => {
+export const fetchJson = (...args) => fetch(...args).then((result) => {
   if (result.status === 401) {
     // eslint-disable-next-line no-throw-literal
     throw { statusCode: 401 };
+  }
+  if (!result.ok) {
+    throw result;
   }
   return result.json();
 });
@@ -66,8 +69,8 @@ export const withToken = (() => {
     const doRequest = (...args) => token
       .then(tk => fn(...args.concat(tk)))
       .catch((err) => {
-        tries += 1;
         if (err.statusCode === 401 && tries < 3) {
+          tries += 1;
           token = getToken(true);
           return doRequest(...args);
         }

@@ -1,5 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 export { default as products } from './products';
+export { fetchJson } from './api';
+
 export const onlyLastRequestedPromise = ((promiseIds) => {
   const whenResolve = (promise, id, promiseID, resolveValue) => {
     if (promise !== undefined) {

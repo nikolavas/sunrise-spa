@@ -1,5 +1,5 @@
 import { required } from 'vuelidate/lib/validators';
-import axios from 'axios';
+import { fetchJson } from '../../../api';
 import sunriseConfig from '../../../../sunrise.config';
 import ServerError from '../../common/form/ServerError/index.vue';
 import LoadingButton from '../../common/form/LoadingButton/index.vue';
@@ -18,8 +18,33 @@ export default {
   }),
   methods: {
     sendRecoveryEmail() {
-      return axios.post('https://a8nroxg8i3.execute-api.eu-west-1.amazonaws.com/dev/email/send',
-        { email: this.email, baseUrl: window.location.origin, projectConfig: sunriseConfig.ct });
+      return fetchJson(
+        'https://a8nroxg8i3.execute-api.eu-west-1.amazonaws.com/dev/email/send',
+        {
+          body: JSON.stringify(
+            {
+              email: this.email,
+              baseUrl: window.location.origin,
+              projectConfig: sunriseConfig.ct,
+            },
+          ),
+          method: 'POST',
+        },
+      ).catch(
+        async (e) => {
+          let message;
+          try {
+            message = await e.text();
+          } catch (error) {
+            // @todo: status 500+ not handled
+            // make get to http://httpstat.us/500 to simulate
+            // eslint-disable-next-line no-throw-literal
+            throw { networkError: true };
+          }
+          // eslint-disable-next-line no-throw-literal
+          throw { status: 404, message };
+        },
+      );
     },
     getErrorMessage({ code }) {
       if (code === 'InvalidSubject') {
