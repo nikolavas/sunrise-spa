@@ -1,14 +1,21 @@
 en:
-  title1: "SUMMER FASHION"
-  title2: "Trendy Sunglasses"
-  title3: "Must to have it"
-  subtitle2: "Accessories for the perfect summer"
-  subtitle3: "Hot pieces for the summer"
-  linkLabel: "Shop collection"
+  title1: SUMMER FASHION
+  title2: Trendy Sunglasses
+  title3: Must to have it
+  subtitle2: Accessories for the perfect summer
+  subtitle3: Hot pieces for the summer
+  linkLabel: Shop collection
 de:
-  title1: "SOMMER MODE"
-  title2: "Sonnenbrillen-Trends"
-  title3: "Hauptsache überdimensional"
-  subtitle2: "Unsere Fashion Must-Haves"
-  subtitle3: "Trendy Sommer 2016 - Auffällige Sonnenbrillen"
-  linkLabel: "Shop collection"
+  title1: SOMMER MODE
+  title2: Sonnenbrillen-Trends
+  title3: Hauptsache überdimensional
+  subtitle2: Unsere Fashion Must-Haves
+  subtitle3: Trendy Sommer 2016 - Auffällige Sonnenbrillen
+  linkLabel: Shop collection
+jp:
+  title1: 夏のファッション
+  title2: トレンディなサングラス
+  title3: 持っている必要があります
+  subtitle2: 完璧な夏のアクセサリー
+  subtitle3: 夏のホットピース
+  linkLabel: ショップコレクション

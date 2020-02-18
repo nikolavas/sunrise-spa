@@ -1,16 +1,24 @@
 en:
-  title: "Change your password"
-  currentPassword: "Current Password"
-  newPassword: "New password"
-  newPasswordConfirm: "Confirm new password"
-  newPasswordConfirmError: "Passwords do not match"
-  updateBtn: "Change password"
-  invalidPassword: "Invalid current password"
+  title: Change your password
+  currentPassword: Current Password
+  newPassword: New password
+  newPasswordConfirm: Confirm new password
+  newPasswordConfirmError: Passwords do not match
+  updateBtn: Change password
+  invalidPassword: Invalid current password
 de:
-  title: "Passwort ändern"
-  currentPassword: "Aktuelles Passwort"
-  newPassword: "Neues Passwort"
-  newPasswordConfirm: "Neues Passwort bestätigen"
-  newPasswordConfirmError: "Passwörter stimmen nicht überein"
-  updateBtn: "Passwort ändern"
-  invalidPassword: "Ungültiges aktuelles Passwort"
+  title: Passwort ändern
+  currentPassword: Aktuelles Passwort
+  newPassword: Neues Passwort
+  newPasswordConfirm: Neues Passwort bestätigen
+  newPasswordConfirmError: Passwörter stimmen nicht überein
+  updateBtn: Passwort ändern
+  invalidPassword: Ungültiges aktuelles Passwort
+jp:
+  title: パスワードを変更してください
+  currentPassword: 現在のパスワード
+  newPassword: 新しいパスワード
+  newPasswordConfirm: 新しいパスワードを確認
+  newPasswordConfirmError: パスワードが一致していません
+  updateBtn: パスワードを変更する
+  invalidPassword: 無効な現在のパスワード

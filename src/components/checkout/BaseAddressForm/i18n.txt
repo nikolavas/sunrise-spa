@@ -1,26 +1,39 @@
 en:
-  firstName: "First Name"
-  lastName: "Last Name"
-  streetName: "Address"
-  additionalStreetInfo: "Additional address info"
-  city: "City"
-  postalCode: "Postal Code"
-  country: "Country"
-  email: "Email"
-  phone: "Phone"
-  back: "Back"
-  continue: "Continue"
-  selectCountry: "Select country"
+  firstName: First Name
+  lastName: Last Name
+  streetName: Address
+  additionalStreetInfo: Additional address info
+  city: City
+  postalCode: Postal Code
+  country: Country
+  email: Email
+  phone: Phone
+  back: Back
+  continue: Continue
+  selectCountry: Select country
 de:
-  firstName: "Vorname"
-  lastName: "Nachname"
-  streetName: "Straße und Hausnummer"
-  additionalStreetInfo: "Adresszusatz"
-  city: "Stadt"
-  postalCode: "PLZ"
-  country: "Land"
-  email: "E-Mail-Adresse"
-  phone: "Telefon"
-  back: "Zurück"
-  continue: "Weiter"
-  selectCountry: "Land auswählen"
+  firstName: Vorname
+  lastName: Nachname
+  streetName: Straße und Hausnummer
+  additionalStreetInfo: Adresszusatz
+  city: Stadt
+  postalCode: PLZ
+  country: Land
+  email: E-Mail-Adresse
+  phone: Telefon
+  back: Zurück
+  continue: Weiter
+  selectCountry: Land auswählen
+jp:
+  firstName: ファーストネーム
+  lastName: 苗字
+  streetName: 住所
+  additionalStreetInfo: 追加住所情報
+  city: 市
+  postalCode: 郵便番号
+  country: 国
+  email: Eメール
+  phone: 電話
+  back: バック
+  continue: 継続する
+  selectCountry: 国を選択

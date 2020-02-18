@@ -1,8 +1,12 @@
 en:
-  go-to-top: "go to top"
-  notFound: "No Results Found"
-  categoryNotFound: "Category Not Found"
+  go-to-top: go to top
+  notFound: No Results Found
+  categoryNotFound: Category Not Found
 de:
-  go-to-top: "????? ??? ???"
-  notFound: "Keine Ergebnisse Gefunden"
-  categoryNotFound: "Kategorie nicht gefunden"
+  go-to-top: ????? ??? ???
+  notFound: Keine Ergebnisse Gefunden
+  categoryNotFound: Kategorie nicht gefunden
+jp:
+  go-to-top: 一番上に行って
+  notFound: 結果が見つかりません
+  categoryNotFound: カテゴリが見つかりません

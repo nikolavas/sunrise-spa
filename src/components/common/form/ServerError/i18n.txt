@@ -1,6 +1,10 @@
 en:
-  badRequestError: "There seems to be an issue with the request"
-  networkError: "There was a error in the connection, please try again later"
+  badRequestError: There seems to be an issue with the request
+  networkError: There was a error in the connection, please try again later
 de:
-  badRequestError: "Es gibt ein Problem mit der Anfrage"
-  networkError: "Bei der Verbindung ist ein Fehler aufgetreten, versuchen Sie es bitte später nochmals"
+  badRequestError: Es gibt ein Problem mit der Anfrage
+  networkError: Bei der Verbindung ist ein Fehler aufgetreten, versuchen Sie es bitte später
+    nochmals
+jp:
+  badRequestError: リクエストに問題があるようです
+  networkError: 接続にエラーがありました。しばらくしてからもう一度お試しください

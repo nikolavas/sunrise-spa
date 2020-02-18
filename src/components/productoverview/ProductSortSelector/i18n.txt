@@ -1,10 +1,15 @@
 en:
-  sortBy: "Sort by"
-  newest: "Newest"
-  oldest: "Oldest"
-  recommended: "Recommended"
+  sortBy: Sort by
+  newest: Newest
+  oldest: Oldest
+  recommended: Recommended
 de:
-  sortBy: "Sortieren nach"
-  newest: "Neueste"
-  oldest: "Älteste"
-  recommended: "Empfohlen"
+  sortBy: Sortieren nach
+  newest: Neueste
+  oldest: Älteste
+  recommended: Empfohlen
+jp:
+  sortBy: 並び替え
+  newest: 最新
+  oldest: 最古
+  recommended: お勧め

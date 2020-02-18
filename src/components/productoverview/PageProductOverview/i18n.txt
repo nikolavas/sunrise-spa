@@ -1,6 +1,9 @@
 en:
-  pleaseWait: "Please wait..."
-  open: "Filter"
+  pleaseWait: Please wait...
+  open: Filter
 de:
-  pleaseWait: "Bitte warten..."
-  open: "Filter öffnen"
+  pleaseWait: Bitte warten...
+  open: Filter öffnen
+jp:
+  pleaseWait: お待ちください...
+  open: フィルタ

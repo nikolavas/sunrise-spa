@@ -1,12 +1,18 @@
 en:
-  shippingAddress: "Shipping address"
-  billingAddress: "Billing address"
-  shippingMethod: "Shipping method"
-  paymentDetails: "Payment details"
-  edit: "Edit"
+  shippingAddress: Shipping address
+  billingAddress: Billing address
+  shippingMethod: Shipping method
+  paymentDetails: Payment details
+  edit: Edit
 de:
-  paymentDetails: "Zahlungsdetails"
-  shippingMethod: "Versandart"
-  shippingAddress: "Lieferanschrift"
-  billingAddress: "Rechnungsadresse"
-  edit: "Bearbeiten"
+  paymentDetails: Zahlungsdetails
+  shippingMethod: Versandart
+  shippingAddress: Lieferanschrift
+  billingAddress: Rechnungsadresse
+  edit: Bearbeiten
+jp:
+  shippingAddress: お届け先の住所
+  billingAddress: 請求先住所
+  shippingMethod: 発送方法
+  paymentDetails: 支払詳細
+  edit: 編集

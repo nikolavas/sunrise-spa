@@ -2,3 +2,5 @@ en:
   shippingMethod: Shipping method
 de:
   shippingMethod: Versandart
+jp:
+  shippingMethod: 発送方法

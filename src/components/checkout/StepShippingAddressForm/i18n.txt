@@ -1,4 +1,6 @@
 en:
-  shippingInformation: "Shipping Information"
+  shippingInformation: Shipping Information
 de:
-  shippingInformation: "Versand Information"
+  shippingInformation: Versand Information
+jp:
+  shippingInformation: 出荷情報

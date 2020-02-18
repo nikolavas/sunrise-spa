@@ -1,6 +1,9 @@
 de:
-  showMore: "Mehr"
-  showLess: "Weniger"
+  showMore: Mehr
+  showLess: Weniger
 en:
-  showMore: "Show more"
-  showLess: "Show less"
+  showMore: Show more
+  showLess: Show less
+jp:
+  showMore: もっと見せる
+  showLess: 少なく表示

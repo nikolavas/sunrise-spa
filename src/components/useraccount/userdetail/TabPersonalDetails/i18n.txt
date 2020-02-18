@@ -1,24 +1,30 @@
 en:
-  welcomeBack: "Hello, {name}"
-  customerNumber: "Customer number"
-  subscribedToNewsletter: "Subscribed to weekly newsletter"
-  bannerOne:
-    title: "Your Sunrise"
-    subtitle: "Make the great days happen"
-    link: "Shop All"
-  bannerTwo:
-    title: "Your Sunrise"
-    subtitle: "Make the great days happen"
-    link: "Shop All"
+  welcomeBack: Hello, {name}
+  customerNumber: Customer number
+  subscribedToNewsletter: Subscribed to weekly newsletter
+  bannerOnetitle: Your Sunrise
+  bannerOnesubtitle: Make the great days happen
+  bannerOnelink: Shop All
+  bannerTwotitle: Your Sunrise
+  bannerTwosubtitle: Make the great days happen
+  bannerTwolink: Shop All
 de:
-  welcomeBack: "Hallo, {name}"
-  customerNumber: "Kundennummer"
-  subscribedToNewsletter: "Subscribed to weekly newsletter"
-  bannerOne:
-    title: "Dein Sunrise"
-    subtitle: "Urlaub in der Sonne"
-    link: "Alles bestellen"
-  bannerTwo:
-    title: "Sunrise Shop"
-    subtitle: "Neue Saison, neuer Style"
-    link: "Alles bestellen"
+  welcomeBack: Hallo, {name}
+  customerNumber: Kundennummer
+  subscribedToNewsletter: Subscribed to weekly newsletter
+  bannerOnetitle: Dein Sunrise
+  bannerOnesubtitle: Urlaub in der Sonne
+  bannerOnelink: Alles bestellen
+  bannerTwotitle: Sunrise Shop
+  bannerTwosubtitle: Neue Saison, neuer Style
+  bannerTwolink: Alles bestellen
+jp:
+  welcomeBack: こんにちは、{name}
+  customerNumber: 顧客番号
+  subscribedToNewsletter: 週刊ニュースレターを購読しました
+  bannerOnetitle: あなたの日の出
+  bannerOnesubtitle: 素晴らしい日々を
+  bannerOnelink: すべてを購入
+  bannerTwotitle: あなたの日の出
+  bannerTwosubtitle: 素晴らしい日々を
+  bannerTwolink: すべてを購入

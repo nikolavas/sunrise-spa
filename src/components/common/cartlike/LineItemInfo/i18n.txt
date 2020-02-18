@@ -1,4 +1,6 @@
 en:
-  available: "Available"
+  available: Available
 de:
-  available: "Verfügbar"
+  available: Verfügbar
+jp:
+  available: 利用可能

@@ -1,10 +1,15 @@
 de:
-  productDetails: "Produktdetails"
-  deliveryReturns: "Versand & Retoure"
-  freeReturns: "Kostenlose Retoure."
-  moreDeliveryInfo: "Versandinformationen"
+  productDetails: Produktdetails
+  deliveryReturns: Versand & Retoure
+  freeReturns: Kostenlose Retoure.
+  moreDeliveryInfo: Versandinformationen
 en:
-  productDetails: "Product Details"
-  deliveryReturns: "Delivery & Returns"
-  freeReturns: "Free return for all orders."
-  moreDeliveryInfo: "Delivery information"
+  productDetails: Product Details
+  deliveryReturns: Delivery & Returns
+  freeReturns: Free return for all orders.
+  moreDeliveryInfo: Delivery information
+jp:
+  productDetails: 製品詳細
+  deliveryReturns: 配送と返品
+  freeReturns: すべての注文の無料返品。
+  moreDeliveryInfo: 配送に関する情報

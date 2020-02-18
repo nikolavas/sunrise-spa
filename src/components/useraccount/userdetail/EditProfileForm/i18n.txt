@@ -1,20 +1,30 @@
 en:
-  title: "Your Personal Details"
-  editBtn: "Edit"
-  updateBtn: "Update Details"
-  cancelBtn: "Cancel"
-  firstName: "First Name"
-  lastName: "Last Name"
-  email: "Email Address"
-  subscribeToNewsletter: "Please add me to the Sunrise Newsletter"
-  duplicatedEmail: "A customer with this email already exists"
+  title: Your Personal Details
+  editBtn: Edit
+  updateBtn: Update Details
+  cancelBtn: Cancel
+  firstName: First Name
+  lastName: Last Name
+  email: Email Address
+  subscribeToNewsletter: Please add me to the Sunrise Newsletter
+  duplicatedEmail: A customer with this email already exists
 de:
-  title: "Ihre Benutzerdaten"
-  editBtn: "Bearbeiten"
-  updateBtn: "Details aktualisieren"
-  cancelBtn: "Abbrechen"
-  firstName: "Vorname"
-  lastName: "Nachname"
-  email: "Email Adresse"
-  subscribeToNewsletter: "Ich möchte den Sunrise Newsletter erhalten."
-  duplicatedEmail: "Ein Kunde mit dieser E-Mail existiert bereits"
+  title: Ihre Benutzerdaten
+  editBtn: Bearbeiten
+  updateBtn: Details aktualisieren
+  cancelBtn: Abbrechen
+  firstName: Vorname
+  lastName: Nachname
+  email: Email Adresse
+  subscribeToNewsletter: Ich möchte den Sunrise Newsletter erhalten.
+  duplicatedEmail: Ein Kunde mit dieser E-Mail existiert bereits
+jp:
+  title: 個人情報
+  editBtn: 編集
+  updateBtn: 更新の詳細
+  cancelBtn: キャンセル
+  firstName: ファーストネーム
+  lastName: 苗字
+  email: 電子メールアドレス
+  subscribeToNewsletter: サンライズニュースレターに私を追加してください
+  duplicatedEmail: このメールを持つ顧客は既に存在します

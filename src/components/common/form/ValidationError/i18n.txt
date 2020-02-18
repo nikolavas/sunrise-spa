@@ -1,10 +1,15 @@
 en:
-  unknownValidation: "Invalid field"
-  required: "Required field"
-  email: "A valid email is required"
-  minLength: "It should contain at least {min} characters"
+  unknownValidation: Invalid field
+  required: Required field
+  email: A valid email is required
+  minLength: It should contain at least {min} characters
 de:
-  unknownValidation: "Ungültiger Feldwert"
-  required: "Pflichtfeld"
-  email: "Eine gültige E-Mail ist erforderlich"
-  minLength: "Es sollte mindestens {min} Zeichen enthalten"
+  unknownValidation: Ungültiger Feldwert
+  required: Pflichtfeld
+  email: Eine gültige E-Mail ist erforderlich
+  minLength: Es sollte mindestens {min} Zeichen enthalten
+jp:
+  unknownValidation: 無効なフィールド
+  required: 必須フィールド
+  email: 有効なメールアドレスが必要です
+  minLength: 少なくとも{min}文字が含まれている必要があります

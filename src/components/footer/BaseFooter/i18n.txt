@@ -1,8 +1,12 @@
 en:
-  imprint: "Imprint"
-  privacyPolicy: "Privacy policy"
-  termsOfUse: "Terms of use"
+  imprint: Imprint
+  privacyPolicy: Privacy policy
+  termsOfUse: Terms of use
 de:
-  imprint: "Impressum"
-  privacyPolicy: "Datenschutz"
-  termsOfUse: "AGB"
+  imprint: Impressum
+  privacyPolicy: Datenschutz
+  termsOfUse: AGB
+jp:
+  imprint: インプリント
+  privacyPolicy: 個人情報保護方針
+  termsOfUse: 利用規約

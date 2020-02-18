@@ -1,20 +1,30 @@
 en:
-  title: "Your order details"
-  orderNumber: "Order Number"
-  date: "Date"
-  print: "Print receipt"
-  description: "Description"
-  quantity: "Quantity"
-  price: "Price"
-  total: "Total"
-  notFound: "Order not found"
+  title: Your order details
+  orderNumber: Order Number
+  date: Date
+  print: Print receipt
+  description: Description
+  quantity: Quantity
+  price: Price
+  total: Total
+  notFound: Order not found
 de:
-  title: "Ihre Bestelldetails"
-  orderNumber: "Bestellnummer"
-  date: "Datum"
-  print: "Beleg drucken"
-  description: "Beschreibung"
-  quantity: "Menge"
-  price: "Preis"
-  total: "Gesamtpreis"
-  notFound: "Bestellung nicht gefunden"
+  title: Ihre Bestelldetails
+  orderNumber: Bestellnummer
+  date: Datum
+  print: Beleg drucken
+  description: Beschreibung
+  quantity: Menge
+  price: Preis
+  total: Gesamtpreis
+  notFound: Bestellung nicht gefunden
+jp:
+  title: ご注文の詳細
+  orderNumber: 注文番号
+  date: 日付
+  print: 領収書を印刷する
+  description: 説明
+  quantity: 量
+  price: 価格
+  total: 合計
+  notFound: 注文が見つかりません

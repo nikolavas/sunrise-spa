@@ -1,8 +1,12 @@
 en:
-  search: "Search"
-  stores: "Stores"
-  help: "Help"
+  search: Search
+  stores: Stores
+  help: Help
 de:
-  search: "Suche"
-  stores: "Filiale"
-  help: "Hilfe"
+  search: Suche
+  stores: Filiale
+  help: Hilfe
+jp:
+  search: 探す
+  stores: 店舗
+  help: 助けて

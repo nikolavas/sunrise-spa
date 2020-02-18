@@ -1,36 +1,54 @@
 en:
-  orderNumber: "Order Number"
-  date: "Date"
-  total: "Total"
-  paymentStatus: "Payment Status"
-  shipmentStatus: "Shipment Status"
-  Shipped: "Shipped"
-  Ready: "Ready"
-  Pending: "Pending"
-  Delayed: "Delayed"
-  Partial: "Partial"
-  Backorder: "Backorder"
-  BalanceDue: "Balance Due"
-  Failed: "Failed"
-  CreditOwed: "Credit Owed"
-  Paid: "Paid"
-  view: "View"
-  emptyOrders: "You have not placed any orders yet!"
+  orderNumber: Order Number
+  date: Date
+  total: Total
+  paymentStatus: Payment Status
+  shipmentStatus: Shipment Status
+  Shipped: Shipped
+  Ready: Ready
+  Pending: Pending
+  Delayed: Delayed
+  Partial: Partial
+  Backorder: Backorder
+  BalanceDue: Balance Due
+  Failed: Failed
+  CreditOwed: Credit Owed
+  Paid: Paid
+  view: View
+  emptyOrders: You have not placed any orders yet!
 de:
-  orderNumber: "Best.-Nr."
-  date: "Datum"
-  total: "Gesamtpreis"
-  paymentStatus: "Zahlungsstatus"
-  shipmentStatus: "Versandstatus"
-  Shipped: "Versandt"
-  Ready: "Bereit"
-  Pending: "Anstehend"
-  Delayed: "Verspätet"
-  Partial: "Teilweise"
-  Backorder: "Lieferrückstand"
-  BalanceDue: "Rechnungsbetrag"
-  Failed: "Fehlgeschlagen"
-  CreditOwed: "Kreditforderung"
-  Paid: "Bezahlt"
-  view: "Ansehen"
-  emptyOrders: "Sie haben noch keine Bestellungen aufgegeben!"
+  orderNumber: Best.-Nr.
+  date: Datum
+  total: Gesamtpreis
+  paymentStatus: Zahlungsstatus
+  shipmentStatus: Versandstatus
+  Shipped: Versandt
+  Ready: Bereit
+  Pending: Anstehend
+  Delayed: Verspätet
+  Partial: Teilweise
+  Backorder: Lieferrückstand
+  BalanceDue: Rechnungsbetrag
+  Failed: Fehlgeschlagen
+  CreditOwed: Kreditforderung
+  Paid: Bezahlt
+  view: Ansehen
+  emptyOrders: Sie haben noch keine Bestellungen aufgegeben!
+jp:
+  orderNumber: 注文番号
+  date: 日付
+  total: 合計
+  paymentStatus: 支払い状況
+  shipmentStatus: 発送状況
+  Shipped: 発送済み
+  Ready: 準備完了
+  Pending: 保留中
+  Delayed: 遅延
+  Partial: 部分的
+  Backorder: 取り寄せ
+  BalanceDue: 未払い残高
+  Failed: 失敗しました
+  CreditOwed: クレジット所有
+  Paid: 有料
+  view: 見る
+  emptyOrders: まだ注文していません！

@@ -1,12 +1,18 @@
 en:
-  secureCheckout: "Secure Checkout"
-  securePayment: "Secure payment"
-  shipping: "Shipping"
-  payment: "Payment"
-  confirmation: "Confirmation"
+  secureCheckout: Secure Checkout
+  securePayment: Secure payment
+  shipping: Shipping
+  payment: Payment
+  confirmation: Confirmation
 de:
-  secureCheckout: "Sicherer Bestellprozess"
-  securePayment: "Sichere Bezahlung"
-  shipping: "Versand"
-  payment: "Zahlung"
-  confirmation: "Bestätigung"
+  secureCheckout: Sicherer Bestellprozess
+  securePayment: Sichere Bezahlung
+  shipping: Versand
+  payment: Zahlung
+  confirmation: Bestätigung
+jp:
+  secureCheckout: 安全なチェックアウト
+  securePayment: 安全なお支払い
+  shipping: 運送
+  payment: 支払い
+  confirmation: 確認

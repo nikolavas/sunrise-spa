@@ -1,4 +1,6 @@
 en:
-  appliedDiscounts: "Applied discounts"
+  appliedDiscounts: Applied discounts
 de:
-  appliedDiscounts: "Angewandte Rabatte"
+  appliedDiscounts: Angewandte Rabatte
+jp:
+  appliedDiscounts: 適用割引

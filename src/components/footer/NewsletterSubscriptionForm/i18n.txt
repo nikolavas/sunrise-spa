@@ -1,8 +1,12 @@
 en:
-  joinNewsletter: "Join our newsletter"
-  subscribe: "Subscribe"
-  yourEmail: "Your email..."
+  joinNewsletter: Join our newsletter
+  subscribe: Subscribe
+  yourEmail: Your email...
 de:
-  joinNewsletter: "Newsletter abonnieren"
-  subscribe: "Anmelden"
-  yourEmail: "Ihre E-Mail-Adresse..."
+  joinNewsletter: Newsletter abonnieren
+  subscribe: Anmelden
+  yourEmail: Ihre E-Mail-Adresse...
+jp:
+  joinNewsletter: ニュースレターに参加する
+  subscribe: 申し込む
+  yourEmail: メールアドレス...

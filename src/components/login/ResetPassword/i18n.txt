@@ -1,14 +1,21 @@
 en:
-  title: "My Account"
-  resetPassword: "Reset Password"
-  newPassword: "New Password"
-  confirmPassword: "Confirm New Password"
-  submit: "Submit"
-  invalidSubject: "The token is invalid"
+  title: My Account
+  resetPassword: Reset Password
+  newPassword: New Password
+  confirmPassword: Confirm New Password
+  submit: Submit
+  invalidSubject: The token is invalid
 de:
-  title: "Mein Konto"
-  resetPassword: "Passwort Zurücksetzen"
-  newPassword: "Neues Password"
-  confirmPassword: "Neues Passwort bestätigen"
-  submit: "Weiter"
-  invalidSubject: "Das Token ist ungültig"
+  title: Mein Konto
+  resetPassword: Passwort Zurücksetzen
+  newPassword: Neues Password
+  confirmPassword: Neues Passwort bestätigen
+  submit: Weiter
+  invalidSubject: Das Token ist ungültig
+jp:
+  title: マイアカウント
+  resetPassword: パスワードを再設定する
+  newPassword: 新しいパスワード
+  confirmPassword: 新しいパスワードを確認
+  submit: 参加する
+  invalidSubject: トークンが無効です

@@ -1,6 +1,6 @@
 en:
-  suggestions:
-    title: "You may also like"
+  title: You may also like
 de:
-  suggestions:
-    title: "Das könnte Ihnen auch gefallen"
+  title: Das könnte Ihnen auch gefallen
+jp:
+  title: あなたも好きかも

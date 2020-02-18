@@ -1,4 +1,6 @@
 en:
-  pageTitle: "Customer Sign In"
+  pageTitle: Customer Sign In
 de:
-  pageTitle: "Kundenanmeldung"
+  pageTitle: Kundenanmeldung
+jp:
+  pageTitle: 顧客サインイン

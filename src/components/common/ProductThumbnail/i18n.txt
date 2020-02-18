@@ -1,12 +1,18 @@
 en:
-  sale: "Sale"
-  new: "New"
-  quickView: "Quick view"
-  moreColors: "More colours"
-  add: "Add item to wishlist"
+  sale: Sale
+  new: New
+  quickView: Quick view
+  moreColors: More colours
+  add: Add item to wishlist
 de:
-  sale: "Sale"
-  new: "Neu"
-  quickView: "Schnellansicht"
-  moreColors: "Mehr Farben"
-  add: "Auf den Wunschzettel"
+  sale: Sale
+  new: Neu
+  quickView: Schnellansicht
+  moreColors: Mehr Farben
+  add: Auf den Wunschzettel
+jp:
+  sale: セール
+  new: 新着
+  quickView: クイックビュー
+  moreColors: より多くの色
+  add: ウィッシュリストにアイテムを追加

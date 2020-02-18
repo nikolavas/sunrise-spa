@@ -1,4 +1,6 @@
 en:
-  required: "Required field"
+  required: Required field
 de:
-  required: "Pflichtfeld"
+  required: Pflichtfeld
+jp:
+  required: 必須フィールド

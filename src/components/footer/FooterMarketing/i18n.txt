@@ -1,6 +1,9 @@
 en:
-  paySecure: "Pay securely with these payment methods"
-  followUs: "Follow us"
+  paySecure: Pay securely with these payment methods
+  followUs: Follow us
 de:
-  paySecure: "Sicher zahlen"
-  followUs: "Follow us"
+  paySecure: Sicher zahlen
+  followUs: Follow us
+jp:
+  paySecure: これらの支払い方法で安全に支払います
+  followUs: フォローする

@@ -1,6 +1,9 @@
 en:
-  continue: "Continue"
-  back: "Back"
+  continue: Continue
+  back: Back
 de:
-  continue: "Weiter"
-  back: "Zurück"
+  continue: Weiter
+  back: Zurück
+jp:
+  continue: 継続する
+  back: バック

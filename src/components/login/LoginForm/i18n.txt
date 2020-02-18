@@ -1,20 +1,31 @@
 en:
-  title: "Returning Customer Sign In"
-  required: "Required Fields"
-  description: "If you have an account, please sign in for a faster checkout"
-  email: "Email"
-  password: "Password"
-  rememberMe: "Remember Me"
-  forgotPassword: "Forgot Password"
-  signIn: "Sign In"
-  invalidCredentials: "Invalid credentials"
+  title: Returning Customer Sign In
+  required: Required Fields
+  description: If you have an account, please sign in for a faster checkout
+  email: Email
+  password: Password
+  rememberMe: Remember Me
+  forgotPassword: Forgot Password
+  signIn: Sign In
+  invalidCredentials: Invalid credentials
 de:
-  title: "Kundenanmeldung"
-  required: "Pflichtfeld"
-  description: "Für einen schnelleren Checkout Prozess, melden Sie sich bitte mit Ihrem persönlichen Kundenkonto ein."
-  email: "E-Mail"
-  password: "Passwort"
-  rememberMe: "Angemeldet bleiben"
-  forgotPassword: "Passwort vergessen"
-  signIn: "Anmelden"
-  invalidCredentials: "Ungültige Anmeldeinformationen"
+  title: Kundenanmeldung
+  required: Pflichtfeld
+  description: Für einen schnelleren Checkout Prozess, melden Sie sich bitte mit Ihrem
+    persönlichen Kundenkonto ein.
+  email: E-Mail
+  password: Passwort
+  rememberMe: Angemeldet bleiben
+  forgotPassword: Passwort vergessen
+  signIn: Anmelden
+  invalidCredentials: Ungültige Anmeldeinformationen
+jp:
+  title: 顧客のサインインを返す
+  required: 必須フィールド
+  description: アカウントをお持ちの場合は、サインインしてチェックアウトを高速化してください
+  email: Eメール
+  password: パスワード
+  rememberMe: 私を覚えてますか
+  forgotPassword: パスワードをお忘れですか
+  signIn: サインイン
+  invalidCredentials: 無効な資格情報

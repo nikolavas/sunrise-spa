@@ -1,4 +1,6 @@
 de:
-  addToCart: "In den Warenkorb"
+  addToCart: In den Warenkorb
 en:
-  addToCart: "Add to Bag"
+  addToCart: Add to Bag
+jp:
+  addToCart: かごに入れます

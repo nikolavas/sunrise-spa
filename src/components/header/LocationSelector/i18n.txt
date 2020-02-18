@@ -1,8 +1,12 @@
 en:
-  location: "Location"
-  language: "Language"
-  country: "Country"
+  location: Location
+  language: Language
+  country: Country
 de:
-  location: "Ort"
-  language: "Sprache"
-  country: "Land"
+  location: Ort
+  language: Sprache
+  country: Land
+jp:
+  location: ロケーション
+  language: 言語
+  country: 国

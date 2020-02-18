@@ -1,8 +1,12 @@
 en:
-  title: "Summer Essentials"
-  subtitle: "Make the great day happen"
-  linkLabel: "Shop collection"
+  title: Summer Essentials
+  subtitle: Make the great day happen
+  linkLabel: Shop collection
 de:
-  title: "Sommer Essentials"
-  subtitle: "Die wichtigsten Stücke des Sommer Trends"
-  linkLabel: "Jetzt bestellen"
+  title: Sommer Essentials
+  subtitle: Die wichtigsten Stücke des Sommer Trends
+  linkLabel: Jetzt bestellen
+jp:
+  title: 夏の必需品
+  subtitle: 素晴らしい一日を
+  linkLabel: ショップコレクション

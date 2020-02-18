@@ -4,3 +4,6 @@ en:
 de:
   paymentMethod: Zahlungsart
   creditCard: Kreditkarte
+jp:
+  paymentMethod: 支払方法
+  creditCard: クレジットカード

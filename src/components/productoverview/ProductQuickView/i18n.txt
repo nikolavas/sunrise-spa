@@ -1,4 +1,6 @@
 en:
-  close: "Close"
+  close: Close
 de:
-  close: "Schließen"
+  close: Schließen
+jp:
+  close: 閉じる

@@ -1,8 +1,12 @@
 en:
-  title: "Unique style for every season"
-  subtitle: "Fashion styles"
-  linkLabel: "Shop collection"
+  title: Unique style for every season
+  subtitle: Fashion styles
+  linkLabel: Shop collection
 de:
-  title: "Einzigartige Stücke für jede Saison"
-  subtitle: "Lassen Sie sich inspirieren"
-  linkLabel: "Shop collection"
+  title: Einzigartige Stücke für jede Saison
+  subtitle: Lassen Sie sich inspirieren
+  linkLabel: Shop collection
+jp:
+  title: 季節ごとにユニークなスタイル
+  subtitle: ファッションスタイル
+  linkLabel: ショップコレクション

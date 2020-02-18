@@ -1,16 +1,24 @@
-  de:
-    miniCart: "Warenkorb"
-    viewBag: "Warenkorb"
-    quantity: "Menge"
-    price: "Price"
-    totalPrice: "Gesamtpreis"
-    delete: "Löschen"
-    checkout: "Checkout"
-  en:
-    miniCart: "Cart"
-    viewBag: "View Bag"
-    quantity: "quantity"
-    price: "Price"
-    totalPrice: "Total"
-    delete: "Delete"
-    checkout: "Checkout"
+de:
+  miniCart: Warenkorb
+  viewBag: Warenkorb
+  quantity: Menge
+  price: Price
+  totalPrice: Gesamtpreis
+  delete: Löschen
+  checkout: Checkout
+en:
+  miniCart: Cart
+  viewBag: View Bag
+  quantity: quantity
+  price: Price
+  totalPrice: Total
+  delete: Delete
+  checkout: Checkout
+jp:
+  miniCart: カート
+  viewBag: バッグを見る
+  quantity: 量
+  price: 価格
+  totalPrice: 合計
+  delete: 削除する
+  checkout: チェックアウト

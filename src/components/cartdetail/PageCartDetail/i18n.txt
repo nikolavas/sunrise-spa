@@ -1,14 +1,21 @@
 en:
-  yourBag: "Your Bag"
+  yourBag: Your Bag
   itemsTotal: "{n} item in total | {n} items in total"
-  empty: "Your bag is empty!"
-  continueShopping: "Continue Shopping"
-  shopNow: "Shop now"
-  startCheckout: "Start Checkout"
+  empty: Your bag is empty!
+  continueShopping: Continue Shopping
+  shopNow: Shop now
+  startCheckout: Start Checkout
 de:
-  yourBag: "Ihr Einkaufswagen"
+  yourBag: Ihr Einkaufswagen
   itemsTotal: "{n} Artikel im Warenkorb"
-  empty: "Ihr Einkaufswagen ist leer!"
-  continueShopping: "Weiter einkaufen"
-  shopNow: "Jetzt einkaufen"
-  startCheckout: "Zur Kasse"
+  empty: Ihr Einkaufswagen ist leer!
+  continueShopping: Weiter einkaufen
+  shopNow: Jetzt einkaufen
+  startCheckout: Zur Kasse
+jp:
+  yourBag: あなたのバッグ
+  itemsTotal: 合計n個のアイテム| 合計n個のアイテム
+  empty: あなたのバッグは空です！
+  continueShopping: ショッピングを続ける
+  shopNow: 今すぐ購入
+  startCheckout: チェックアウトを開始

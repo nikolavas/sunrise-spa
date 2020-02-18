@@ -1,6 +1,9 @@
 en:
-  home: "Home"
-  all: 'All'
+  home: Home
+  all: All
 de:
-  home: "Home"
-  all: 'Alle'
+  home: Home
+  all: Alle
+jp:
+  home: ホーム
+  all: すべて

@@ -1,6 +1,9 @@
 en:
-  sameAddress: "Same as shipping address"
-  billingInformation: "Billing Information"
+  sameAddress: Same as shipping address
+  billingInformation: Billing Information
 de:
-  sameAddress: "Entspricht die Lieferadresse"
-  billingInformation: "Rechnung Information"
+  sameAddress: Entspricht die Lieferadresse
+  billingInformation: Rechnung Information
+jp:
+  sameAddress: お届け先住所と同じ
+  billingInformation: 課金情報

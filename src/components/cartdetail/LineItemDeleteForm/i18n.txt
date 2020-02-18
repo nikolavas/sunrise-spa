@@ -1,4 +1,6 @@
 en:
-  delete: "Delete"
+  delete: Delete
 de:
-  delete: "Löschen"
+  delete: Löschen
+jp:
+  delete: 削除する

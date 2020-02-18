@@ -1,8 +1,12 @@
 en:
-  code: "Discount code"
-  apply: "Apply"
-  nonApplicable: "This discount code is non applicable"
+  code: Discount code
+  apply: Apply
+  nonApplicable: This discount code is non applicable
 de:
-  code: "Rabattcode"
-  apply: "Anwenden"
-  nonApplicable: "Dieser Rabattcode ist nicht anwendbar"
+  code: Rabattcode
+  apply: Anwenden
+  nonApplicable: Dieser Rabattcode ist nicht anwendbar
+jp:
+  code: ディスカウントコード
+  apply: 適用する
+  nonApplicable: この割引コードは適用されません

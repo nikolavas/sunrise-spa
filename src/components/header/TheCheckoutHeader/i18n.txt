@@ -1,4 +1,6 @@
 en:
-  needHelp: "Need help? Customer Service"
+  needHelp: Need help? Customer Service
 de:
-  needHelp: "Brauchen Sie Hilfe? Kundenservice"
+  needHelp: Brauchen Sie Hilfe? Kundenservice
+jp:
+  needHelp: 助けが必要？ 顧客サービス

@@ -1,8 +1,12 @@
 en:
-  title: "Summer Lovin'"
-  subtitle: "Summer must have outfits"
-  linkLabel: "Shop collection"
+  title: Summer Lovin'
+  subtitle: Summer must have outfits
+  linkLabel: Shop collection
 de:
-  title: "Sommer Fashion"
-  subtitle: "Beste Outfits für die Saison"
-  linkLabel: "Jetzt bestellen"
+  title: Sommer Fashion
+  subtitle: Beste Outfits für die Saison
+  linkLabel: Jetzt bestellen
+jp:
+  title: サマーラヴィン
+  subtitle: 夏は服装が必要
+  linkLabel: ショップコレクション

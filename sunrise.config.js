@@ -16,6 +16,7 @@ export default {
   languages: {
     en: 'English',
     de: 'Deutsch',
+    jp: '日本語',
   },
   countries: {
     DE: 'Deutschland',
