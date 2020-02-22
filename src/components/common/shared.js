@@ -95,10 +95,10 @@ export const withAppollo = appolloValues => (component) => {
             return this.$apollo.queries[entity]?.loading;
           },
           [`${entity}Total`]() {
-            return appolloValues[entity].getter(this)?.total;
+            return appolloValues[entity].getter(this?.$apollo?.data)?.total;
           },
           [`${entity}Data`]() {
-            return appolloValues[entity].getter(this)?.results;
+            return appolloValues[entity].getter(this?.$apollo?.data)?.results;
           },
         }), {
           apolloLoading() {

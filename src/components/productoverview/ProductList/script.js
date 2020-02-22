@@ -141,8 +141,8 @@ export default withAppollo(
           where: `slug(${locale(this)}="${this.categorySlug}")`,
         };
       },
-      getter(comp) {
-        return comp?.$apollo?.data?.categories;
+      getter(data) {
+        return data?.categories;
       },
       skip: vm => !vm.categorySlug,
     },
