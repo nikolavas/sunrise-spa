@@ -80,7 +80,7 @@ describe('my orders', () => {
     cy.get('[data-test=pagination]').should('not.exist');
     cy.createOrder(cartDraft1, { orderNumber: String(9002) });
     cy.createOrder(cartDraft1, { orderNumber: String(9003) });
-    cy.get('[data-test=change-password-button]').click();
+    cy.visit('/user/account');
     cy.get('[data-test=my-orders-button]').click();
     cy.get('[data-test=pagination]').should('exist');
     cy.get('[data-test=order-list]')

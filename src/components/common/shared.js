@@ -116,3 +116,4 @@ export const withAppollo = appolloValues => (component) => {
     component,
   );
 };
+export const locale = component => component?.$route?.params?.locale;

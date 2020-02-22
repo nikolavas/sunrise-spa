@@ -74,8 +74,6 @@ export default {
           offset: (page - 1) * limit,
         };
       },
-
-      fetchPolicy: 'no-cache',
     },
   },
 };
